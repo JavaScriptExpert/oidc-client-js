@@ -12,7 +12,7 @@ var app = express();
 
 var static = express.static(path.join(__dirname, 'public'));
 app.use(function (req, res, next) {
-    res.set('Content-Security-Policy', "default-src 'self'");
+    //res.set('Content-Security-Policy', "connect-src 'self'");
     next();
   });
 app.use(static);
